@@ -1,0 +1,36 @@
+{
+  "name": "cadastro_de_contatos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "api": "ts-node-dev --ignore-watch node_modules --transpile-only  api/app.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "db:drop": "ts-node-dev --transpile-only api/database/drop_database.ts",
+    "db:create": "ts-node-dev --transpile-only api/database/create_database.ts",
+    "db:recreate": "ts-node-dev --transpile-only api/database/recreate_database.ts",
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.10",
+    "@types/uuid": "^8.3.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.6",
+    "typeorm-extension": "^2.3.0",
+    "uuid": "^8.3.2"
+  }
+}
