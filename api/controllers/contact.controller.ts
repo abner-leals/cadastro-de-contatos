@@ -3,6 +3,7 @@ import { AppError, handlerError } from "../errors";
 import {
   createContactService,
   deleteContactService,
+  detailContactService,
   listContactsService,
   updateContactService,
 } from "../services/contacts.service";
@@ -58,4 +59,9 @@ export const deleteContactController = async (req: Request, res: Response) => {
       handlerError(error, res);
     }
   }
+};
+export const detailContactController = async (req: Request, res: Response) => {
+  const { id_contact } = req.params;
+  const client = await detailContactService(id_contact);
+  return res.status(status_code.HTTP_200_OK).json(client);
 };

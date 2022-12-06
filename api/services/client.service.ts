@@ -82,3 +82,9 @@ export const deleteClientService = async (id: string) => {
 
   return;
 };
+
+export const detailClientService = async (id: string) => {
+  const clientRepo = AppDataSource.getRepository(Client);
+  const client = await clientRepo.findOneBy({ id: id });
+  return client;
+};

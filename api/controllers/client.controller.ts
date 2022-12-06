@@ -6,6 +6,7 @@ import {
   userCreateService,
   updateClientService,
   deleteClientService,
+  detailClientService,
 } from "../services/client.service";
 import { status_code } from "../status_code";
 
@@ -65,4 +66,9 @@ export const deleteClientController = async (req: Request, res: Response) => {
       handlerError(error, res);
     }
   }
+};
+export const detailClienttController = async (req: Request, res: Response) => {
+  const { id_contact } = req.params;
+  const client = await detailClientService(id_contact);
+  return res.status(status_code.HTTP_200_OK).json(client);
 };

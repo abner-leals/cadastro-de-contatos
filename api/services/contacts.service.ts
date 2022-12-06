@@ -91,3 +91,9 @@ export const deleteContactService = async (id: string) => {
 
   return;
 };
+export const detailContactService = async (id: string) => {
+  const contactRepo = AppDataSource.getRepository(Contact);
+  const contact = await contactRepo.findOneBy({ id: id });
+
+  return contact;
+};
