@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -40,6 +41,15 @@ const patch = yup.object().shape({
 
 export const Formulario = ({ metodo, rota, id }) => {
   const { userId } = useParams();
+  const [busca, setBusca] = useState();
+  useEffect(() => {
+    if (userId) {
+      api.get(`${rota}/` + userId).then((response) => {
+        setBusca(response.data);
+      });
+    }
+  }, []);
+
   const schema = { post, patch };
 
   const {
@@ -47,7 +57,6 @@ export const Formulario = ({ metodo, rota, id }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema[metodo]) });
-  const [busca, setBusca] = useState();
 
   const onSubmit = (data) => {
     if (metodo === "post" && rota === "contact") {
