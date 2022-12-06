@@ -8,7 +8,8 @@
     "db:drop": "ts-node-dev --transpile-only api/database/drop_database.ts",
     "db:create": "ts-node-dev --transpile-only api/database/create_database.ts",
     "db:recreate": "ts-node-dev --transpile-only api/database/recreate_database.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "doc": " cd insomnia-final-result/ && yarn serve"
   },
   "license": "MIT",
   "devDependencies": {
