@@ -5,13 +5,10 @@ export const PaineldeFundo = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
+  gap: 5%;
   align-items: center;
   flex-direction: column;
-  @media (min-width: 615px) {
-    flex-direction: row;
-    justify-content: center;
-  }
 `;
 export const QuadroReq = styled.form`
   h1 {

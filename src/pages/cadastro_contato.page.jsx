@@ -1,14 +1,17 @@
+import { useParams } from "react-router-dom";
+import { Kabecalho } from "../components/cabecalho";
 import { Content, PaineldeFundo } from "../components/containers/style";
 import { Formulario } from "../components/form";
 import { GlobalStyle } from "../style";
 
-export function Home() {
+export function CadastroContato() {
   return (
     <div>
       <GlobalStyle />
       <PaineldeFundo>
+        <Kabecalho voltar />
         <Content>
-          <Formulario />
+          <Formulario metodo={"post"} rota={`contact`} />
         </Content>
       </PaineldeFundo>
     </div>

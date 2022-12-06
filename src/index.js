@@ -1,17 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Kabecalho } from "./components/cabecalho";
-import { Klientes } from "./components/lista_Cliente";
-
-import { Home } from "./pages";
-import Inicio from "./pages/home.page";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Kabecalho />
-    <Klientes />
+    <App />
   </React.StrictMode>
 );
 

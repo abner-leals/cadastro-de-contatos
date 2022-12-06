@@ -4,7 +4,14 @@ export const ContainerBotoes = styled.div`
   display: flex;
   gap: 5px;
 `;
+export const Card = styled.div`
+  border: 1px solid #6999;
+  padding: 10px;
+`;
 export const Container = styled.div`
+  a {
+    text-decoration: none;
+  }
   border: 1px solid #699999;
   display: flex;
   flex-direction: column;

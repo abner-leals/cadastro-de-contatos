@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CabecalhoListaVazia, ListaFantasma, ListaVazia } from "./styles";
 
 export default function Inicio() {
@@ -10,7 +11,9 @@ export default function Inicio() {
           </span>
           <h1>Centralize o controle dos Contatos Separando-os por Clientes</h1>
           <p>de forma rápida e segura</p>
-          <button className="App-botao">Iniciar</button>
+          <Link to={"/Cliente"}>
+            <button className="App-botao">Iniciar</button>
+          </Link>
         </div>
         <div className="container">
           <ListaVazia />
