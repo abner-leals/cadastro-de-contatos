@@ -36,6 +36,8 @@ export class Client {
   @UpdateDateColumn()
   updatedAt: Date;
 
+  @Column()
+  password: string;
   constructor() {
     if (!this.id) {
       this.id = uuid();

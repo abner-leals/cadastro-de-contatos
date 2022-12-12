@@ -8,6 +8,7 @@ export interface IUserRequestCreate {
   full_name: string;
   telephone: string;
   email: string;
+  password?: string;
 }
 export interface IUserResponseCreate {
   id: string;
@@ -23,4 +24,5 @@ export interface IClientUpdate {
   full_name?: string;
   telephone?: string;
   email?: string;
+  password?: string;
 }
